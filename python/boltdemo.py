@@ -5,7 +5,7 @@ URI = "bolt://localhost:7687"
 with GraphDatabase.driver(URI) as driver:
 
     # Create Vector index on field description in Character
-    driver.execute_query("CREATE VECTOR INDEX FOR (c:Character) ON (c.description) OPTIONS {dim:5, similarityFunction:'euclidean'}")
+    driver.execute_query( "CREATE VECTOR INDEX FOR (c:Character) ON (c.description) OPTIONS {dim:5, similarityFunction:'euclidean'}")
 
     # Fill in the Graph with some data on books and characters
     driver.execute_query( """CREATE 
