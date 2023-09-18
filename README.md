@@ -1,6 +1,15 @@
-# demos
+# FalkorDB Demos
 
-## Python
+## Step 1 - Run FalkorDB server
+
+```
+docker run -p 6379:6379 -it --rm falkordb/falkordb:edge
+
+```
+
+## Step 2 - pick your programming language
+
+### [Python](https://github.com/FalkorDB/demos/tree/main/python)
 
 ```bash
 cd python
@@ -9,7 +18,7 @@ python vectordemo.py
 python boltdemo.py
 ```
 
-## node
+### [node](https://github.com/FalkorDB/demos/tree/main/node)
 
 ```bash
 cd node
@@ -18,7 +27,7 @@ node vectordemo.js
 node boltdemo.js
 ```
 
-## Java
+### [Java](https://github.com/FalkorDB/demos/tree/main/java)
 
 ```bash
 cd java
