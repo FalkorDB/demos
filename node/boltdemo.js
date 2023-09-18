@@ -23,3 +23,5 @@ const result = await driver.executeQuery(`CALL db.idx.vector.query
                         RETURN b.name AS name`)
 
 console.log(result.records[0].get("name"))
+
+await driver.close()
