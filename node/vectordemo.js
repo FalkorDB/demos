@@ -27,3 +27,5 @@ const result = await graph.query(`CALL db.idx.vector.query
                         RETURN b.name AS name`)
 
 console.log(result.data[0]['name'])
+
+await client.disconnect();

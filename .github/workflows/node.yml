@@ -12,6 +12,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    
     services:
       falkordb:
         image: falkordb/falkordb:latest

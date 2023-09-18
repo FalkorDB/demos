@@ -19,6 +19,13 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    services:
+      falkordb:
+        image: falkordb/falkordb:latest
+        ports:
+          - 6379:6379
+          - 7687:7687
+
     steps:
     - uses: actions/checkout@v3
     
@@ -31,7 +38,7 @@ jobs:
         
     - name: Build with Maven
       working-directory: ./java
-      run: mvn -B package --file java/pom.xml
+      run: mvn -B package
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph

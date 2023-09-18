@@ -28,7 +28,7 @@
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>
-							<mainClass>com.redis.Neo4JBench</mainClass>
+							<mainClass>com.falkordb.FalkorDBVectorDemo</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
