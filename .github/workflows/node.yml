@@ -12,7 +12,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     services:
       falkordb:
         image: falkordb/falkordb:latest
@@ -33,6 +33,6 @@ jobs:
       - name: run
         working-directory: ./node
         run: |
-            node boltdemo.js
-            node vectordemo.js
+            node boltdemo.js | grep -q "The Neverending Story"
+            node vectordemo.js | grep -q "The Neverending Story1"
   
