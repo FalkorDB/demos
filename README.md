@@ -22,5 +22,7 @@ node boltdemo.js
 
 ```bash
 cd java
-mvn install
+mvn compile assembly:single
+java -cp ./target/FalkorDBVectorDemo-0.0.1-SNAPSHOT-jar-with-dependencies.jar com.falkordb.FalkorDBVectorDemo
+java -cp ./target/FalkorDBVectorDemo-0.0.1-SNAPSHOT-jar-with-dependencies.jar com.falkordb.BoltVectorDemo
 ```
