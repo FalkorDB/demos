@@ -34,5 +34,5 @@ jobs:
         working-directory: ./node
         run: |
             node boltdemo.js | grep -q "The Neverending Story"
-            node vectordemo.js | grep -q "The Neverending Story1"
+            node vectordemo.js | grep -q "The Neverending Story"
   

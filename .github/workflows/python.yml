@@ -45,5 +45,5 @@ jobs:
     - name: Run
       working-directory: ./python
       run: |
-        python boltdemo.py
-        python vectordemo.py
+        python boltdemo.py  | grep -q "The Neverending Story"
+        python vectordemo.py  | grep -q "The Neverending Story"
