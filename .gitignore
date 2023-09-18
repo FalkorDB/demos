@@ -48,3 +48,4 @@
 /node/.DS_Store
 /node/dump.rdb
 /node/documentation/
+/node/package-lock.json
