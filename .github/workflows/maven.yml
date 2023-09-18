@@ -40,8 +40,16 @@ jobs:
         
     - name: Build with Maven
       working-directory: ./java
-      run: mvn -B package
+      run: mvn compile assembly:single
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
+      working-directory: ./java
       uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
+
+
+    - name: Test
+      working-directory: ./java
+      run: |
+        java -cp ./target/FalkorDBVectorDemo-0.0.1-SNAPSHOT-jar-with-dependencies.jar com.falkordb.FalkorDBVectorDemo | grep -q "The Neverending Story"
+        java -cp ./target/FalkorDBVectorDemo-0.0.1-SNAPSHOT-jar-with-dependencies.jar com.falkordb.BoltVectorDemo | grep -q "The Neverending Story"
