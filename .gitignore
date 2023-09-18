@@ -1,0 +1,17 @@
+.classpath
+*.iml
+*.ipr
+*.iws
+nb*
+.project
+/java/.settings/
+/java/.gradle/
+/java/target/
+/java/build/
+/java/bin/
+tags
+.idea
+*.aof
+*.rdb
+redis-git
+appendonlydir/
