@@ -12,6 +12,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    services:
+      falkordb:
+        image: falkordb/falkordb:latest
+        ports:
+          - 6379:6379
+          - 7687:7687
+
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -21,4 +28,10 @@ jobs:
         working-directory: ./node
         run: |
           npm ci
-          npm test
+
+      - name: run
+        working-directory: ./node
+        run: |
+            node boltdemo.js
+            node vectordemo.js
+  
