@@ -1,5 +1,4 @@
 # Java
-
 /java/.classpath
 /java/*.iml
 /java/*.ipr
@@ -19,7 +18,6 @@
 /java/appendonlydir/
 
 # python
-
 /python/*.pyc
 /python/redis.egg-info
 /python/build/
@@ -39,3 +37,14 @@
 /python/*.xml
 /python/.coverage*
 /python/docker/stunnel/keys
+
+#node
+/node/.idea/
+/node/.nyc_output/
+/node/.vscode/
+/node/coverage/
+/node/dist/
+/node/node_modules/
+/node/.DS_Store
+/node/dump.rdb
+/node/documentation/
