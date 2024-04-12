@@ -3,7 +3,7 @@
 ## Step 1 - Run FalkorDB server
 
 ```
-docker run -it -p 6379:6379 -p 7687:7687 falkordb/falkordb:4.0.0-alpha.1
+docker run -it -p 6379:6379 falkordb/falkordb:4.0.0-alpha.1
 
 ```
 
